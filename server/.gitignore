@@ -1,0 +1,28 @@
+# Dependencies
+/vendor/
+
+# Environment
+.env
+
+# Storage
+/storage/assets/*
+/storage/packages/*
+/storage/temp/*
+!storage/assets/.gitkeep
+!storage/packages/.gitkeep
+!storage/temp/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+

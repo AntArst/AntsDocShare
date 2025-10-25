@@ -1,0 +1,191 @@
+/* Dark Theme Styles for PDGP Console */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    border-color: #58a6ff;
+}
+
+.card-body {
+    color: #c9d1d9;
+}
+
+.card-title {
+    color: #58a6ff;
+}
+
+.card-text {
+    color: #8b949e;
+}
+
+/* Sidebar Styles */
+.sidebar .nav-link {
+    padding: 0.75rem 1rem;
+    color: #c9d1d9;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #21262d;
+    color: #58a6ff;
+}
+
+.sidebar .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.sidebar .nav-link i {
+    margin-right: 0.5rem;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+    background-color: #0d1117;
+    border-color: #30363d;
+    color: #c9d1d9;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #0d1117;
+    border-color: #58a6ff;
+    color: #c9d1d9;
+    box-shadow: 0 0 0 0.25rem rgba(88, 166, 255, 0.25);
+}
+
+.form-control::placeholder {
+    color: #8b949e;
+}
+
+/* Button Overrides for Dark Theme */
+.btn-primary {
+    background-color: #238636;
+    border-color: #238636;
+}
+
+.btn-primary:hover {
+    background-color: #2ea043;
+    border-color: #2ea043;
+}
+
+.btn-outline-secondary {
+    color: #8b949e;
+    border-color: #30363d;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #21262d;
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+/* Table Styles */
+.table {
+    color: #c9d1d9;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #161b22;
+}
+
+.table > :not(caption) > * > * {
+    border-bottom-color: #30363d;
+}
+
+/* Alert Styles */
+.alert {
+    border: 1px solid #30363d;
+}
+
+.alert-info {
+    background-color: #0c2d6b;
+    color: #58a6ff;
+    border-color: #1f6feb;
+}
+
+.alert-success {
+    background-color: #0f2e1c;
+    color: #3fb950;
+    border-color: #238636;
+}
+
+.alert-danger {
+    background-color: #490a0a;
+    color: #f85149;
+    border-color: #da3633;
+}
+
+.alert-warning {
+    background-color: #341a00;
+    color: #d29922;
+    border-color: #9e6a03;
+}
+
+/* Badge Styles */
+.badge.bg-success {
+    background-color: #238636 !important;
+}
+
+.badge.bg-danger {
+    background-color: #da3633 !important;
+}
+
+.badge.bg-info {
+    background-color: #1f6feb !important;
+}
+
+/* Modal Styles */
+.modal-content {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+}
+
+.modal-header {
+    border-bottom-color: #30363d;
+}
+
+.modal-footer {
+    border-top-color: #30363d;
+}
+
+/* Stats Cards */
+.card.text-white.bg-primary {
+    background-color: #1f6feb !important;
+    border-color: #1f6feb;
+}
+
+.card.text-white.bg-success {
+    background-color: #238636 !important;
+    border-color: #238636;
+}
+
+.card.text-white.bg-info {
+    background-color: #0969da !important;
+    border-color: #0969da;
+}
+
+/* Border Colors */
+.border-bottom {
+    border-color: #30363d !important;
+}
+
