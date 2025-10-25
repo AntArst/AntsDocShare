@@ -1,0 +1,68 @@
+Copyright Notice for Source Files
+==================================
+
+Add this notice to the top of your source code files:
+
+For PHP files:
+--------------
+<?php
+/**
+ * Product Display Generator Project (PDGP)
+ * 
+ * Copyright (c) 2025 AntsDocShare Contributors
+ * Licensed under Non-Commercial License
+ * 
+ * This file is part of PDGP, which is licensed for non-commercial use only.
+ * See LICENSE file in the project root for full license terms.
+ * For commercial licensing, contact the project maintainers.
+ */
+
+
+For JavaScript/TypeScript files:
+--------------------------------
+/**
+ * Product Display Generator Project (PDGP)
+ * 
+ * Copyright (c) 2025 AntsDocShare Contributors
+ * Licensed under Non-Commercial License
+ * 
+ * This file is part of PDGP, which is licensed for non-commercial use only.
+ * See LICENSE file in the project root for full license terms.
+ * For commercial licensing, contact the project maintainers.
+ */
+
+
+For CSS files:
+--------------
+/**
+ * PDGP - Non-Commercial License
+ * Copyright (c) 2025 AntsDocShare Contributors
+ * See LICENSE file for full terms
+ */
+
+
+For Rust files:
+---------------
+// Product Display Generator Project (PDGP)
+// Copyright (c) 2025 AntsDocShare Contributors
+// Licensed under Non-Commercial License
+// See LICENSE file for full terms
+
+
+For SQL/Config files:
+--------------------
+-- Product Display Generator Project (PDGP)
+-- Copyright (c) 2025 AntsDocShare Contributors
+-- Licensed under Non-Commercial License
+
+
+For Markdown/Documentation:
+---------------------------
+<!--
+Product Display Generator Project (PDGP)
+Copyright (c) 2025 AntsDocShare Contributors
+Licensed under Non-Commercial License
+-->
+
+Note: Adding these notices is optional but recommended for clear attribution.
+

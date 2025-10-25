@@ -1,0 +1,120 @@
+NON-COMMERCIAL LICENSE AGREEMENT
+
+Product Display Generator Project (PDGP)
+Copyright (c) 2025 AntsDocShare Contributors
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. DEFINITIONS
+
+   "License" shall mean the terms and conditions for use, reproduction, and 
+   distribution as defined by Sections 1 through 9 of this document.
+
+   "Licensor" shall mean the copyright owner or entity authorized by the 
+   copyright owner that is granting the License.
+
+   "You" (or "Your") shall mean an individual or Legal Entity exercising 
+   permissions granted by this License.
+
+   "Software" shall mean the Product Display Generator Project (PDGP) and all 
+   associated source code, documentation, and assets.
+
+   "Commercial Use" shall mean any use of the Software that is primarily 
+   intended for or directed toward commercial advantage or monetary compensation. 
+   This includes, but is not limited to:
+   - Selling the Software or any derivative works
+   - Using the Software to provide paid services
+   - Incorporating the Software into a product that is sold
+   - Using the Software in any business operation for profit
+
+2. GRANT OF LICENSE
+
+   Subject to the terms and conditions of this License, the Licensor hereby 
+   grants You a worldwide, royalty-free, non-exclusive, non-transferable license 
+   to use, copy, modify, and distribute the Software for NON-COMMERCIAL purposes 
+   only.
+
+3. RESTRICTIONS
+
+   You may NOT:
+   
+   a) Use the Software for Commercial Use as defined in Section 1.
+   
+   b) Sell, lease, rent, or otherwise transfer the Software or any derivative 
+      works for monetary compensation.
+   
+   c) Offer the Software or any derivative works as a commercial service or 
+      Software-as-a-Service (SaaS).
+   
+   d) Use the Software in any business, enterprise, or organization that 
+      generates revenue, unless explicitly authorized in writing by the Licensor.
+   
+   e) Remove or alter any copyright notices, trademarks, or attribution 
+      statements contained in the Software.
+
+4. PERMITTED USES
+
+   You MAY:
+   
+   a) Use the Software for personal, educational, or research purposes.
+   
+   b) Modify and create derivative works for non-commercial purposes.
+   
+   c) Distribute copies of the Software for non-commercial purposes, provided 
+      that this License is included and all copyright notices are preserved.
+   
+   d) Use the Software for demonstration, testing, or evaluation purposes.
+
+5. ATTRIBUTION
+
+   You must retain, in the Software and any derivative works, all copyright, 
+   patent, trademark, and attribution notices from the Software, excluding 
+   those notices that do not pertain to any part of the derivative works.
+
+6. DISCLAIMER OF WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+   SOFTWARE.
+
+7. LIMITATION OF LIABILITY
+
+   IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; 
+   OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+   WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR 
+   OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
+   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+8. TERMINATION
+
+   This License and the rights granted hereunder will terminate automatically 
+   upon any breach by You of the terms of this License. Upon termination, You 
+   must cease all use of the Software and destroy all copies in your possession 
+   or control.
+
+9. COMMERCIAL LICENSE INQUIRIES
+
+   If You wish to use the Software for Commercial Use, You must obtain a 
+   separate commercial license from the Licensor. For commercial licensing 
+   inquiries, please contact the project maintainers.
+
+10. GENERAL
+
+    This License constitutes the entire agreement between the parties with 
+    respect to the Software licensed here. If any provision of this License is 
+    held to be unenforceable, such provision shall be reformed only to the 
+    extent necessary to make it enforceable.
+
+END OF TERMS AND CONDITIONS
+
+---
+
+For commercial licensing inquiries or questions about this license, please 
+open an issue in the project repository or contact the project maintainers.
+
