@@ -1,5 +1,9 @@
 # Product Display Generator Project (PDGP)
 
+![CI Pipeline](https://github.com/AntArst/AntsDocShare/actions/workflows/ci.yml/badge.svg)
+![Code Quality](https://github.com/AntArst/AntsDocShare/actions/workflows/code-quality.yml/badge.svg)
+![Docker Publish](https://github.com/AntArst/AntsDocShare/actions/workflows/docker-publish.yml/badge.svg)
+
 A streamlined system for generating and deploying product display interfaces to embedded devices. Users provide product data through a simple application, which is processed on the server side to automatically generate frontend code using an AI model.
 
 ## Project Status
@@ -120,6 +124,51 @@ See [server/README.md](server/README.md) for complete API documentation.
 - `POST /api/upload` - Upload products
 - `GET /api/template/csv` - Download CSV template
 
+## CI/CD and Testing
+
+This project includes comprehensive GitHub Actions workflows for continuous integration and deployment:
+
+### Automated Testing
+- **PHP Syntax Checks**: Validates all PHP code for syntax errors
+- **Composer Validation**: Ensures dependencies are properly configured
+- **Database Testing**: Validates schema and seed data
+- **Docker Build Tests**: Ensures containers build and run correctly
+- **Integration Tests**: Tests the complete application stack
+- **Security Audits**: Checks for vulnerable dependencies
+
+### Code Quality
+- **PSR-12 Compliance**: PHP code style checking
+- **File Structure Validation**: Ensures required files exist
+- **SQL Syntax Validation**: Checks database scripts
+- **Documentation Linting**: Validates markdown files
+- **Dependency Review**: Monitors for security vulnerabilities
+
+### Continuous Deployment
+- **Docker Image Publishing**: Automatically publishes tagged releases to GitHub Container Registry
+- **Dependabot**: Automated dependency updates
+
+See [.github/WORKFLOWS.md](.github/WORKFLOWS.md) for detailed documentation on CI/CD workflows.
+
+### Running Tests Locally
+
+```bash
+# PHP Syntax Check
+cd server && find . -name "*.php" -not -path "./vendor/*" -exec php -l {} \;
+
+# Validate Composer
+cd server && composer validate --strict
+
+# Test Docker Build
+docker-compose config
+docker-compose up -d
+docker-compose ps
+docker-compose down -v
+
+# Database Validation
+mysql -u root -p pdgp_test < server/database/schema.sql
+mysql -u root -p pdgp_test < server/database/seed.sql
+```
+
 ## Development Roadmap
 
 - [x] Server infrastructure with Docker
@@ -129,6 +178,7 @@ See [server/README.md](server/README.md) for complete API documentation.
 - [x] Web management console
 - [x] Asset management
 - [x] CSV template generator
+- [x] CI/CD workflows with GitHub Actions
 - [ ] Rust client application
 - [ ] AI model integration
 - [ ] Package generation

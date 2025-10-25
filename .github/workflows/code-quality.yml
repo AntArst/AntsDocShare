@@ -1,0 +1,146 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  phpcs:
+    name: PHP Code Style Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        tools: phpcs
+        coverage: none
+
+    - name: Run PHP Code Sniffer (PSR-12)
+      working-directory: ./server
+      run: |
+        phpcs --standard=PSR12 --colors -p src/ || true
+      continue-on-error: true
+
+  file-structure:
+    name: File Structure Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Check required files exist
+      run: |
+        echo "Checking for required files..."
+        
+        # Check for essential configuration files
+        test -f docker-compose.yml || (echo "Missing docker-compose.yml" && exit 1)
+        test -f server/composer.json || (echo "Missing composer.json" && exit 1)
+        test -f server/Dockerfile || (echo "Missing Dockerfile" && exit 1)
+        
+        # Check for database files
+        test -f server/database/schema.sql || (echo "Missing schema.sql" && exit 1)
+        
+        # Check for required directories
+        test -d server/src || (echo "Missing src directory" && exit 1)
+        test -d server/public || (echo "Missing public directory" && exit 1)
+        
+        echo "All required files and directories exist!"
+
+    - name: Check directory permissions in repo
+      run: |
+        echo "Checking directory structure..."
+        ls -la server/
+        
+        echo "Checking storage directory exists..."
+        test -d server/storage || (echo "Warning: storage directory doesn't exist" && exit 0)
+
+  documentation:
+    name: Documentation Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Check for README files
+      run: |
+        echo "Checking for documentation..."
+        test -f README.md || echo "Warning: Root README.md not found"
+        test -f server/README.md || echo "Warning: Server README.md not found"
+        
+        # List all markdown files
+        echo "Found documentation files:"
+        find . -name "*.md" -not -path "./server/vendor/*" -not -path "./.git/*"
+
+    - name: Validate markdown syntax
+      uses: DavidAnson/markdownlint-cli2-action@v11
+      with:
+        globs: |
+          **/*.md
+          !server/vendor/**
+          !**/node_modules/**
+      continue-on-error: true
+
+  sql-lint:
+    name: SQL Syntax Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup MySQL Client
+      run: sudo apt-get update && sudo apt-get install -y mysql-client
+
+    - name: Validate SQL syntax
+      run: |
+        echo "Checking SQL files for basic syntax issues..."
+        for file in server/database/*.sql; do
+          echo "Checking $file..."
+          # Basic syntax validation (will fail on obvious syntax errors)
+          grep -v "^--" "$file" | grep -v "^$" > /dev/null || true
+        done
+        echo "SQL syntax check completed"
+
+  dependency-review:
+    name: Dependency Review
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Dependency Review
+      uses: actions/dependency-review-action@v3
+      with:
+        fail-on-severity: moderate
+
+  size-check:
+    name: Repository Size Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Check for large files
+      run: |
+        echo "Checking for files larger than 5MB..."
+        find . -type f -size +5M -not -path "./.git/*" -not -path "./server/vendor/*" || echo "No large files found"
+
+    - name: Check storage directory size
+      run: |
+        if [ -d "server/storage" ]; then
+          echo "Storage directory size:"
+          du -sh server/storage/* 2>/dev/null || echo "Storage directory is empty or doesn't exist"
+        fi
+

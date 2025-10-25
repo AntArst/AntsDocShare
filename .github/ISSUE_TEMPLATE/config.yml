@@ -1,0 +1,12 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Questions & Discussions
+    url: https://github.com/YOUR_USERNAME/AntsDocShare/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📚 Documentation
+    url: https://github.com/YOUR_USERNAME/AntsDocShare/blob/main/README.md
+    about: Read the project documentation
+  - name: 🔧 CI/CD Workflows
+    url: https://github.com/YOUR_USERNAME/AntsDocShare/blob/main/.github/WORKFLOWS.md
+    about: Learn about our testing and deployment workflows
+
