@@ -1,4 +1,4 @@
-# PDGP Server
+# PDGP Server test 
 
 PHP-based server for the Product Display Generator Project with JWT authentication, multi-tenant site management, and API endpoints for product data upload/download.
 
