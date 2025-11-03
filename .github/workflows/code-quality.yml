@@ -81,7 +81,7 @@ jobs:
         find . -name "*.md" -not -path "./server/vendor/*" -not -path "./.git/*"
 
     - name: Validate markdown syntax
-      uses: DavidAnson/markdownlint-cli2-action@v11
+      uses: DavidAnson/markdownlint-cli2-action@v20
       with:
         globs: |
           **/*.md
